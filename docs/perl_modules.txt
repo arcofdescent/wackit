@@ -1,0 +1,12 @@
+
+version MIME::Lite Date::Manip File::Slurp \
+Readonly Config::General Template Log::Log4perl \
+DBIx::Class HTML::Template \
+CGI::Application CGI::Application::Dispatch \
+CGI::Application::Plugin::Authentication CGI::Application::Plugin::TT \
+CGI::Application::Plugin::Session CGI::Application::Plugin::Forward \
+CGI::Application::Plugin::Redirect CGI::Application::Plugin::AutoRunmode \
+Data::FormValidator HTML::FillInForm \
+
+
+

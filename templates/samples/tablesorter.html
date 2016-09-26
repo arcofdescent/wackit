@@ -1,0 +1,72 @@
+
+<table class="query_results tablesorter">
+<thead>
+    <tr>
+        <th class="{sorter: 'company_name'}">Company Name</th>
+        <th class="{sorter: 'digit'}">Zip Code</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr>
+        <td>
+          <a href="/company/1">Microsoft Inc.</a>
+        </td>
+        <td class="number">
+          400 789
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <a href="/company/2">Google Inc.</a>
+        </td>
+        <td class="number">
+          400 789
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <a href="/company/3">SUN Microsystems</a>
+        </td>
+        <td class="number">
+          400 789
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <a href="/company/4">Acme Consulting Inc.</a>
+        </td>
+        <td class="number">
+          400 789
+        </td>
+    </tr>
+</tbody>
+</table>
+
+<script>
+
+// add parser through the tablesorter addParser method 
+$.tablesorter.addParser({ 
+    // set a unique id 
+    id: 'company_name', 
+    is: function(s) { 
+        // return false so this parser is not auto detected 
+        return false; 
+    }, 
+    format: function(s) { 
+        // format your data for normalization 
+        return s.replace(/<a href=".*">/,'');
+    }, 
+    // set type, either numeric or text 
+    type: 'text' 
+}); 
+
+$(document).ready(function() {
+    $(".query_results").tablesorter({
+        sortList: [[0,0]]
+        //debug: true
+    });
+});
+
+</script>
+

@@ -1,0 +1,34 @@
+
+wackit - Web Application Deployment gets done
+
+Wackit is a web application framework in Perl, based on the popular
+CGI::Application framework. Wackit aims to decrease time and cost to deploy,
+decrease time to add new features, and is meant for developers who just want
+to get things done.
+
+Links
+    http://sourceforge.net/projects/wackit/
+
+AUTHORS
+
+    Rohan Almeida <rohan@almeida.in>
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2006 by Rohan Almeida <rohan@almeida.in>
+
+This is free software; you can redistribute it and/or modify it under
+the terms of either:
+
+a) the GNU General Public License
+    at http://opensource.org/licenses/gpl-license.php
+or
+
+b) the "Artistic License"
+    at http://www.perl.com/pub/a/language/misc/Artistic.html
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See either the GNU General Public License or the
+Artistic License for more details.
+

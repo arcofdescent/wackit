@@ -1,0 +1,72 @@
+
+<div class="wrapper">
+
+    <div style="float: left; width: 500px;">
+        <form class="hform" method="POST">
+            <fieldset>
+            <legend>New User</legend>
+
+            [% IF form.results.msgs.some_errors %]
+                <div class="error_box">
+                Please correct the highlighted fields
+                </div>
+            [% END %]
+
+            [% INCLUDE form_field
+                field = 'first_name',
+                field_name = 'First Name',
+                field_input = 
+                '<input type="text" name="first_name" id="first_name"/>',
+            %] 
+            
+            [% INCLUDE form_field
+                field = 'password',
+                field_name = 'Password',
+                field_input = 
+                '<input type="password" name="password" id="password"/>',
+            %] 
+            
+            [% INCLUDE form_field
+                field = 'password_cnf',
+                field_name = 'Retype password',
+                field_input = 
+                '<input type="password" name="password_cnf" id="password_cnf"/>',
+            %] 
+            
+            [% INCLUDE form_field
+                field = 'email',
+                field_name = 'Email',
+                field_input = 
+                '<input type="text" name="email" id="email"/>',
+            %] 
+            
+            <p>
+                <label>&nbsp;</label>
+                <button type="submit" name="submit" value="submit">Add</button>
+                <button type="reset">Reset</button>
+            </p>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div style="float: left; width: 200px; margin-left: 20px;">
+        Details about the form and this page can go here
+    </div>
+
+</div>
+
+[% BLOCK form_field %]
+    <p [% form.results.msgs.$field && 'class="field_error"' %]>
+        <label for="[% field %]">[% field_name %]: </label>
+        [% field_input %]
+        [% IF form.results.msgs.$field %]
+            <br/>
+            <label>&nbsp;</label>
+            <span class="field_error">
+            [% form.results.msgs.$field %]
+            </span>
+        [% END %]
+    </p>
+[% END %]
+
